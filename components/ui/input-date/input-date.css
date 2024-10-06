@@ -23,6 +23,8 @@
   --db-font-family: inherit;
   --dp-cell-size: 2.75rem;
   --dp-border-radius: theme(borderRadius.none);
+  --dp-input-padding: 10px 0px;
+  --dp-input-icon-padding: 0px;
 }
 
 :is(.dark) .dp__theme_light {

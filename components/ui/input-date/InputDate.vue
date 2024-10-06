@@ -63,6 +63,9 @@ const { locale } = useI18n()
     <template #clear-icon="{ clear }">
       <slot name="clear-icon" :clear="clear" />
     </template>
+    <template #input-icon>
+      <span />
+    </template>
   </DatePicker>
 </template>
 
