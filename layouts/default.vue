@@ -30,7 +30,7 @@ const navLinks = computed<
     <nav class="container flex items-center justify-between gap-3 py-3">
       <AppLogo />
       <ul class="flex items-center gap-3">
-        <template v-for="navLink in navLinks" :key="link.label">
+        <template v-for="navLink in navLinks" :key="navLink.label">
           <li>
             <NuxtLink :to="localePath(navLink.to)">{{
               navLink.label

@@ -7,8 +7,8 @@ const head = useLocaleHead({
 </script>
 
 <template>
-  <Html :lang="head.htmlAttrs.lang" :dir="head.htmlAttrs.dir"></Html>
-  <div>
+  <Html :lang="head.htmlAttrs.lang" :dir="head.htmlAttrs.dir"> </Html>
+  <div class="font-montserrat">
     <NuxtLoadingIndicator color="hsl(var(--primary) / 1)" :height="3" />
     <NuxtLayout>
       <NuxtPage />
