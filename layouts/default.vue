@@ -104,10 +104,10 @@ const footerLinks = computed(() => {
     <main>
       <NuxtPage />
     </main>
-    <footer class="py-6 bg-white">
+    <footer class="py-10 bg-white">
       <div class="container grid gap-6 lg:grid-cols-4">
         <AppLogo />
-        <template v-for="group in footerLinks" :key="group.label">
+        <template v-for="(group, index) in footerLinks" :key="group.label">
           <div class="space-y-3">
             <p class="text-lg font-bold text-gray-700">{{ group.label }}</p>
             <ul class="space-y-1 text-gray-500">
@@ -116,6 +116,18 @@ const footerLinks = computed(() => {
                   <NuxtLink>{{ item.label }}</NuxtLink>
                 </li>
               </template>
+              <div class="pt-5 space-y-2 max-w-32">
+                <template v-if="index == footerLinks.length - 1">
+                  <NuxtImg
+                    src="/images/app-store.svg"
+                    class="object-cover w-full"
+                  />
+                  <NuxtImg
+                    src="/images/google-play.svg"
+                    class="object-cover w-full"
+                  />
+                </template>
+              </div>
             </ul>
           </div>
         </template>
