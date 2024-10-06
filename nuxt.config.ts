@@ -49,6 +49,19 @@ export default defineNuxtConfig({
       titleTemplate: "%s | GSE",
     },
   },
+  imports: {
+    presets: [
+      {
+        from: "radix-vue",
+        imports: [
+          "useForwardPropsEmits",
+          "useForwardProps",
+          "useEmitAsProps",
+          "Primitive",
+        ],
+      },
+    ],
+  },
 
   i18n: {
     lazy: true,
