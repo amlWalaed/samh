@@ -31,6 +31,8 @@ export default defineNuxtConfig({
     prefix: "",
     componentDir: "./components/ui",
   },
-
+  experimental: {
+    typedPages: true,
+  },
   modules: ["@nuxtjs/i18n", "@nuxtjs/tailwindcss", "shadcn-nuxt"],
 })
