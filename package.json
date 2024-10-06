@@ -12,6 +12,7 @@
   "dependencies": {
     "@iconify-json/heroicons": "^1.2.0",
     "@iconify-json/radix-icons": "^1.2.0",
+    "@nuxt/image": "^1.8.1",
     "@nuxtjs/i18n": "^8.5.5",
     "@nuxtjs/tailwindcss": "^6.12.1",
     "@vee-validate/zod": "^4.13.2",

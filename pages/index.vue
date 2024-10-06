@@ -1,6 +1,7 @@
 <script setup lang="ts"></script>
 <template>
-  <div>
+  <div class="page-wrapper">
     <HomeHeroSection />
+    <HomeTripsList />
   </div>
 </template>

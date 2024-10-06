@@ -1,5 +1,5 @@
 import animate from "tailwindcss-animate"
-import { icons } from "./tailwind"
+import { icons, appPlugin } from "./tailwind"
 
 /** @type {import('tailwindcss').Config} */
 module.exports = {
@@ -104,6 +104,7 @@ module.exports = {
       fontFamily: {
         "playfair-display": ["Playfair Display", "system-ui"],
         montserrat: ["Montserrat", "sans-serif"],
+        lato: ["Lato", "sans-serif"],
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
@@ -113,5 +114,5 @@ module.exports = {
       },
     },
   },
-  plugins: [animate, icons],
+  plugins: [animate, icons, appPlugin],
 }
