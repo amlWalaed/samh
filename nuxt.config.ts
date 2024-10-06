@@ -62,6 +62,9 @@ export default defineNuxtConfig({
       },
     ],
   },
+  build: {
+    transpile: ["@vuepic/vue-datepicker"],
+  },
 
   i18n: {
     lazy: true,

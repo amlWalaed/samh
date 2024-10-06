@@ -1,4 +1,5 @@
-const animate = require("tailwindcss-animate")
+import animate from "tailwindcss-animate"
+import { icons } from "./tailwind"
 
 /** @type {import('tailwindcss').Config} */
 module.exports = {
@@ -112,5 +113,5 @@ module.exports = {
       },
     },
   },
-  plugins: [animate],
+  plugins: [animate, icons],
 }
