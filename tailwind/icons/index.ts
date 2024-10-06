@@ -1,4 +1,8 @@
 import { iconsPlugin, getIconCollections } from "@egoist/tailwindcss-icons"
+import baselineAirlineSeatReclineExtra from "./baseline-airline-seat-recline-extra"
+import calendarDay from "./calendar-day"
+import planeArrival from "./plane-arrival"
+import planeDeparture from "./plane-departure"
 
 export const icons = iconsPlugin({
   collections: {
@@ -18,6 +22,26 @@ export const icons = iconsPlugin({
           body: '<g fill="currentColor" stroke="none"> <circle cx="25" cy="10" r="6" > <animate attributeName="r" begin="0.1s" dur="1s" values="1;7;1" repeatCount="indefinite" /> <animate attributeName="opacity" begin="0.1" dur="1s" values="0.2;1;0.2" repeatCount="indefinite" /> </circle> <circle cx="50" cy="10" r="6" > <animate attributeName="r" begin="0.3s" dur="1s" values="1.5;7;1.5" repeatCount="indefinite" /> <animate attributeName="opacity" begin="0.2" dur="1s" values="0.2;1;0.2" repeatCount="indefinite" /> </circle> <circle cx="75" cy="10" r="6" > <animate attributeName="r" begin="0.5s" dur="1s" values="2;7;2" repeatCount="indefinite" /> <animate attributeName="opacity" begin="0.3" dur="1s" values="0.2;1;0.2" repeatCount="indefinite" /> </circle> </g>',
           width: 100,
           height: 20,
+        },
+        "baseline-airline-seat-recline-extra": {
+          body: baselineAirlineSeatReclineExtra,
+          width: 28,
+          height: 26,
+        },
+        "calendar-day": {
+          body: calendarDay,
+          width: 28,
+          height: 26,
+        },
+        "plane-arrival": {
+          body: planeArrival,
+          width: 28,
+          height: 26,
+        },
+        "plane-departure": {
+          body: planeDeparture,
+          width: 28,
+          height: 26,
         },
       },
     },
