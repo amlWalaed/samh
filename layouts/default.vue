@@ -103,13 +103,14 @@ const footerLinks = computed(() => {
         <AppSwitchLang variant="ghost" class="max-md:hidden" />
         <Button>{{ $t("sign-in") }} </Button>
       </div>
-      <Sheet>
-        <SheetTrigger>
+      <Sheet class="md:hidden">
+        <SheetTrigger as-child>
           <Button
             icon="i-heroicons-bars-3-bottom-left"
             aria-label="open menu"
             variant="ghost"
             size="icon"
+            class="md:hidden"
           />
         </SheetTrigger>
         <SheetContent>
