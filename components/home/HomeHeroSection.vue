@@ -155,7 +155,6 @@ const classes = computed(() => {
               <Button
                 type="submit"
                 icon="i-radix-icons-magnifying-glass"
-                class="md:ms-auto"
                 :aria-label="$t('search')"
               />
             </div>
