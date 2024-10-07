@@ -24,7 +24,7 @@ const fieldId = props.id ?? `${useId()}-radio-item`
 </script>
 
 <template>
-  <div class="flex items-center gap-2">
+  <div :dir="$i18n.locale === 'ar' && 'rtl'" class="flex items-center gap-2">
     <RadioGroupItem
       v-bind="forwardedProps"
       :class="

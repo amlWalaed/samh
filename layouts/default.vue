@@ -2,7 +2,7 @@
 import type { RouteLocationRaw } from "vue-router"
 
 const localePath = useLocalePath()
-
+const { t } = useI18n()
 const navLinks = computed<
   {
     label: string
@@ -11,15 +11,15 @@ const navLinks = computed<
 >(() => {
   return [
     {
-      label: "Home",
+      label: t("home"),
       to: { name: "index" },
     },
     {
-      label: "Promo",
+      label: t("promo"),
       to: { name: "" },
     },
     {
-      label: "My Booking",
+      label: t("my-booking"),
       to: { name: "" },
     },
   ]
@@ -28,56 +28,56 @@ const navLinks = computed<
 const footerLinks = computed(() => {
   return [
     {
-      label: "About",
+      label: t("about"),
       subItems: [
         {
-          label: "About GooseFlight",
+          label: t("about-gooseflight"),
         },
         {
-          label: "How it works",
+          label: t("how-it-works"),
         },
         {
-          label: "Blog",
+          label: t("blog"),
         },
         {
-          label: "Forum",
+          label: t("forum"),
         },
       ],
     },
     {
-      label: "Support",
+      label: t("support"),
       subItems: [
         {
-          label: "Help Center",
+          label: t("help-center"),
         },
         {
-          label: "Contact us",
+          label: t("contact-us"),
         },
         {
-          label: "Privacy policy",
+          label: t("privacy-policy"),
         },
         {
-          label: "Terms of service",
+          label: t("terms-of-service"),
         },
         {
-          label: "Trust and safety",
+          label: t("trust-and-safety"),
         },
         {
-          label: "Accessibility",
+          label: t("accessibility"),
         },
       ],
     },
     {
-      label: "Get the app",
+      label: t("get-the-app"),
       subItems: [
         {
-          label: "Tripma for Android",
+          label: t("tripma-for-android"),
         },
         {
-          label: "Tripma for iOS",
+          label: t("tripma-for-ios"),
         },
         {
-          label: "Mobile site",
+          label: t("mobile-site"),
         },
       ],
     },
@@ -99,7 +99,10 @@ const footerLinks = computed(() => {
           </li>
         </template>
       </ul>
-      <Button>Sign in </Button>
+      <div class="flex items-center gap-2">
+        <AppSwitchLang variant="ghost" />
+        <Button>{{ $t("sign-in") }} </Button>
+      </div>
     </nav>
     <main>
       <NuxtPage />

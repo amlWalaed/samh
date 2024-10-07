@@ -66,7 +66,7 @@ const classes = computed(() => {
   >
     <div class="container content-center min-h-screen space-y-10">
       <h1
-        class="max-w-4xl mx-auto font-bold text-center text-transparent text-6xl/snug font-playfair-display w-fit bg-gradient-to-l to-secondary-950 via-primary from-primary bg-clip-text"
+        class="max-w-4xl mx-auto text-2xl font-bold text-center text-transparent md:text-6xl/snug font-playfair-display w-fit bg-gradient-to-l to-secondary-950 via-primary from-primary bg-clip-text"
       >
         {{ $t("discover-our-paradise-worlds-travel-anywhere-now") }}
       </h1>
@@ -93,7 +93,7 @@ const classes = computed(() => {
                 </FormControl>
               </FormItem>
             </FormField>
-            <div class="flex items-center justify-between gap-4 pt-6">
+            <div class="flex flex-wrap items-center justify-between gap-4 pt-6">
               <FormField v-slot="{ componentField }" type="input" name="from">
                 <FormItem>
                   <FormLabel icon="i-app-plane-departure" :value="$t('from')" />
@@ -121,7 +121,7 @@ const classes = computed(() => {
                 <FormItem>
                   <FormLabel icon="i-app-calendar-day" :value="$t('return')" />
                   <FormControl>
-                    <InputDate placeholder="DD/MM/YYYY" />
+                    <InputDate :placeholder="$t('dd-mm-yyyy')" />
                   </FormControl>
                 </FormItem>
               </FormField>
@@ -129,7 +129,7 @@ const classes = computed(() => {
                 <FormItem>
                   <FormLabel icon="i-app-calendar-day" :value="$t('depart')" />
                   <FormControl>
-                    <InputDate placeholder="DD/MM/YYYY" />
+                    <InputDate :placeholder="$t('dd-mm-yyyy')" />
                   </FormControl>
                 </FormItem>
               </FormField>
@@ -145,7 +145,7 @@ const classes = computed(() => {
                       :options="classes"
                       option-label="name"
                       option-value="id"
-                      placeholder="1 adult, Economy"
+                      :placeholder="$t('1-adult-economy')"
                     />
                   </FormControl>
                 </FormItem>
@@ -153,6 +153,7 @@ const classes = computed(() => {
               <Button
                 type="submit"
                 icon="i-radix-icons-magnifying-glass"
+                class="ms-auto"
                 :aria-label="$t('search')"
               />
             </div>

@@ -52,6 +52,9 @@ export default defineNuxtConfig({
       ],
       titleTemplate: "%s | GSE",
     },
+    teleportAttrs: {
+      dir: "ltr",
+    },
   },
   imports: {
     presets: [

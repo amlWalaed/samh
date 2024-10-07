@@ -1,6 +1,6 @@
 import animate from "tailwindcss-animate"
 import { icons, appPlugin } from "./tailwind"
-
+import tailwindcssRadix from "tailwindcss-radix"
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   darkMode: ["class"],
@@ -114,5 +114,5 @@ module.exports = {
       },
     },
   },
-  plugins: [animate, icons, appPlugin],
+  plugins: [animate, icons, appPlugin, tailwindcssRadix],
 }
