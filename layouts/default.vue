@@ -90,7 +90,7 @@ const footerLinks = computed(() => {
       class="container sticky top-0 flex items-center justify-between gap-3 py-3 bg-background"
     >
       <AppLogo />
-      <ul class="flex items-center gap-3">
+      <ul class="items-center hidden gap-3 md:flex">
         <template v-for="navLink in navLinks" :key="navLink.label">
           <li>
             <NuxtLink :to="localePath(navLink.to)">{{
@@ -100,9 +100,34 @@ const footerLinks = computed(() => {
         </template>
       </ul>
       <div class="flex items-center gap-2">
-        <AppSwitchLang variant="ghost" />
+        <AppSwitchLang variant="ghost" class="max-md:hidden" />
         <Button>{{ $t("sign-in") }} </Button>
       </div>
+      <Sheet>
+        <SheetTrigger>
+          <Button
+            icon="i-heroicons-bars-3-bottom-left"
+            aria-label="open menu"
+            variant="ghost"
+            size="icon"
+          />
+        </SheetTrigger>
+        <SheetContent>
+          <AppLogo />
+          <ul class="space-y-1">
+            <template v-for="navLink in navLinks" :key="navLink.label">
+              <li
+                class="px-2 py-3 text-lg font-medium transition-all duration-500 border-transparent border-s-2 hover:bg-primary-50 hover:border-primary"
+              >
+                <NuxtLink :to="localePath(navLink.to)">{{
+                  navLink.label
+                }}</NuxtLink>
+              </li>
+            </template>
+          </ul>
+          <AppSwitchLang variant="default" class="ms-auto w-fit" block />
+        </SheetContent>
+      </Sheet>
     </nav>
     <main>
       <NuxtPage />

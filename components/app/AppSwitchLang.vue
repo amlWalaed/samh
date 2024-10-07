@@ -24,7 +24,7 @@ const switchLocaleAndReload = (locale: LocaleObject) => {
     v-for="locale in availableLocales"
     :key="locale.code"
     :label="locale.code"
-    variant="ghost"
+    v-bind="$attrs"
   >
     <slot>
       <Button />

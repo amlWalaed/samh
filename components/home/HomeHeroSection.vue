@@ -93,7 +93,9 @@ const classes = computed(() => {
                 </FormControl>
               </FormItem>
             </FormField>
-            <div class="flex flex-wrap items-center justify-between gap-4 pt-6">
+            <div
+              class="grid gap-4 pt-6 md:justify-between md:items-center md:flex"
+            >
               <FormField v-slot="{ componentField }" type="input" name="from">
                 <FormItem>
                   <FormLabel icon="i-app-plane-departure" :value="$t('from')" />
@@ -153,7 +155,7 @@ const classes = computed(() => {
               <Button
                 type="submit"
                 icon="i-radix-icons-magnifying-glass"
-                class="ms-auto"
+                class="md:ms-auto"
                 :aria-label="$t('search')"
               />
             </div>
